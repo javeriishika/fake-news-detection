@@ -1,46 +1,73 @@
 # Fake News Detection Using NLP and Machine Learning
 
-This project detects fake news articles using natural language processing (NLP) and machine learning techniques. It includes:
+This project aims to detect fake news articles using Natural Language Processing (NLP) and Machine Learning techniques. It includes data preprocessing, model training, and a Flask-based web app for real-time fake news detection.
 
-- Data preprocessing and merging CSV files containing fake and true news.
-- Training a machine learning model (Logistic Regression) to classify news articles.
-- A Flask web app to interact with the model and predict whether a news article is fake or true.
-- A simple login page with user authentication.
-- Instructions for running the app locally.
+---
+
+## Features
+
+- **Data Merging:** Combines fake and true news datasets into a single cleaned file.
+- **Model Training:** Trains a Logistic Regression classifier on the news data.
+- **Web Application:** Flask app with a login page and an intuitive UI to classify news articles.
+- **User-friendly Interface:** Includes user authentication and centered layout with colors to enhance UX.
+- **Deployable:** Easy to run locally and deploy on any platform supporting Flask.
+
+---
 
 ## Project Structure
 
 fake-news-detection/
-│
-├── app.py # Flask web app
-├── train_model.py # Model training script
-├── merge_csv.py # Script to merge CSV data files
-├── data/ # Folder for CSV data files (NOT tracked in Git)
-├── templates/ # HTML templates for the Flask app
+├── app.py # Flask application
+├── train_model.py # Script to train ML model
+├── merge_csv.py # Script to merge CSV datasets
+├── data/ # Data folder (excluded from Git repo)
+│ ├── Fake.csv # Fake news dataset
+│ └── True.csv # True news dataset
+├── templates/ # HTML templates
 │ ├── index.html
 │ └── login.html
 ├── requirements.txt # Python dependencies
 └── README.md # This file
 
 
+---
+
 ## Setup Instructions
 
-1. Clone the repo:
+1. **Clone the repository:**
 
 ```bash
-git clone https://github.com/yourusername/fake-news-detection.git
+git clone https://github.com/javeriishika/fake-news-detection.git
 cd fake-news-detection
-Create a Python virtual environment and activate it:
+Create and activate a Python virtual environment:
 python3 -m venv venv
 source venv/bin/activate
-Install dependencies:
+Install required packages:
 pip install -r requirements.txt
-Download the data files (Fake.csv and True.csv) from [Google Drive link or wherever you uploaded] and place them inside the data/ folder.
-Merge CSV files and train the model:
+Download datasets:
+Download Fake.csv and True.csv from the original source and place them inside the data/ folder.
+
+Merge datasets and train the model:
 python3 merge_csv.py
 python3 train_model.py
 Run the Flask app:
 python3 app.py
-Open your browser and go to:
-http://127.0.0.1:5000
+Open your browser:
+Navigate to http://127.0.0.1:5000 to use the app.
+
+Notes
+
+The data/ folder is excluded from Git to avoid pushing large files.
+Ensure datasets are downloaded manually and placed correctly.
+The login page improves app security and user experience.
+Feel free to customize HTML/CSS in templates/ for a personalized look.
+
+License
+
+This project is open-source and available under the MIT License.
+
+
+
+
+
 
