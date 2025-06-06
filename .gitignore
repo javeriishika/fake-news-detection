@@ -1,6 +1,3 @@
-__pycache__/
-*.pyc
-.env
 *.pkl
-nltk_data/
+*.csv
 
